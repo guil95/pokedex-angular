@@ -1,0 +1,14 @@
+<div class="container main">
+    <div class="loading" *ngIf="loading">
+        <img src="../assets/loadingp.gif">
+      </div>
+  <div class="row">
+    <div class="col-12 col-md-7">
+      <app-lista></app-lista>
+    </div>
+    <div class="col-12 col-md-5">
+      <app-detalhes *ngIf="detalhesService.mostrarDetalhe"></app-detalhes>
+    </div>
+  </div>
+</div>
+

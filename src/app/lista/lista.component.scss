@@ -1,0 +1,25 @@
+.pesquisa{
+    left: 5%;
+    top: 50px;
+  }
+  #lista{
+      margin-top: 20px;
+      li{
+        cursor: pointer;
+        display: block;
+        float: left;
+        margin: 0 2.5%;
+        width: 20%;
+
+        &:hover{
+            background-color: #F08030;
+        }
+        
+        img {
+            display: block;
+            margin: 0 auto;
+            width: 100%;
+          }
+      }
+
+  }

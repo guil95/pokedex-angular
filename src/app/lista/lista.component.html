@@ -1,0 +1,9 @@
+
+ <!-- <div class="pesquisa">
+  <label>Pesquisa</label>
+  <input id="searchText" type="text" placeholder="Digite nome do pokemon">
+</div> -->
+
+<ul id="lista" *ngFor="let pokemon of pokemons; let i = index">
+  <li (click)="mostrarDetalhe(pokemon,'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/'+(i+1)+'.png',(i+1))"><img [src]="'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/'+(i+1)+'.png'"><span>{{i+1}} - {{pokemon.name}}</span></li>
+</ul>
