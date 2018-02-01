@@ -9,7 +9,7 @@ export class InterceptorHttp implements HttpInterceptor {
 
     public messages: Array<any> = []
     static mostrarLoading = new EventEmitter();
-    public contador = 0
+
     constructor( 
 
     ) {
@@ -19,7 +19,7 @@ export class InterceptorHttp implements HttpInterceptor {
 
 
         InterceptorHttp.mostrarLoading.emit(true)
-        this.contador = 1
+
         console.log('mostrando loading')
         if (!req.headers.has('Content-Type')) {
             req = req.clone({headers: req.headers.set('Content-Type', 'application/json')});

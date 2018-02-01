@@ -8,7 +8,7 @@ import { DetalhesService } from '../services/detalhes.service'
 })
 export class DetalhesComponent implements OnInit {
 
-  constructor(private detalhesService: DetalhesService) { }
+  constructor(public detalhesService: DetalhesService) { }
 
   ngOnInit() {
   }
