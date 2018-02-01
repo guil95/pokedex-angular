@@ -1,7 +1,7 @@
 <div class="detalhes">
     <h1>#{{detalhesService.pokemon.id}} - {{detalhesService.pokemon.name}}</h1>
-    <h2><span class="badge badge-secondary">{{detalhesService.pokemon.tipo1}}</span></h2>
-    <h2><span class="badge badge-secondary">{{detalhesService.pokemon.tipo2}}</span></h2>
+    <h2><span class="badge" [ngClass]="detalhesService.pokemon.tipo1">{{detalhesService.pokemon.tipo1}}</span></h2>
+    <h2><span class="badge" [ngClass]="detalhesService.pokemon.tipo2">{{detalhesService.pokemon.tipo2}}</span></h2>
         <img [src]="detalhesService.pokemon.url" id="foto" /><br>
         <strong>{{detalhesService.pokemon.statsName1}}</strong>
         <div class="progress" style="margin-bottom: 15px;">

@@ -1,4 +1,8 @@
 <input type="text" class="form-control" placeholder="Pesquise pokemon" [(ngModel)]="filtro">
 <ul id="lista" *ngFor="let pokemon of pokemons | search:'name':filtro; let i = index">
-  <li (click)="mostrarDetalhe(pokemon,'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/'+(i+1)+'.png',(i+1))"><img [src]="'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/'+(i+1)+'.png'"><span>{{i+1}} - {{pokemon.name}}</span></li>
+  <li [ngClass]="{'clear': (i+1)%4==0}" (click)="mostrarDetalhe(pokemon,'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/'+pokemon.id+'.png',pokemon.id)">
+   <img [src]="'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/'+pokemon.id+'.png'">
+   <span class="id">{{pokemon.id.padStart(3,"0")}}</span>
+   <span>{{pokemon.name}}</span>
+  </li>
 </ul>

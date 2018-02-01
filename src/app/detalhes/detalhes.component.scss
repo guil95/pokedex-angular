@@ -1,0 +1,48 @@
+.detalhes{
+    position: fixed;
+}
+
+.badge{
+    color: #FFF;
+    font-weight: bold;
+    background-color: #000;
+    &.FIRE{
+        background-color: #F00;
+    }
+    &.WATER{
+        background-color: #4b7ce8;
+    }
+    &.BUG{
+        background-color: #17a2b8;
+    }
+    &.FLYING{
+        background-color: #ab96f3;
+    }
+    &.NORMAL{
+        background-color: #cd825a;
+    }
+    &.POISON{
+        background-color: #6f42c1;
+    }
+    &.GROUND{
+        background-color: #824b2f;
+    }
+    &.ELECTRIC{
+        background-color: #e2c331;
+    }
+    &.FAIRY{
+        background-color: #e67382;
+    }
+    &.GRASS{
+        background-color: #22a941;
+    }
+    &.FIGHTING{
+        background-color: #e24a18;
+    }
+    &.PSYCHIC{
+        background-color: #00b4d8;
+    }
+}
+img{
+    min-width: 160px;
+}

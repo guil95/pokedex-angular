@@ -20,7 +20,11 @@ export class ListaComponent implements OnInit {
 
   ngOnInit() {
     this.pokedexApiService.buscarPokemons().subscribe(ret => {
-     
+      ret['results'].forEach(i => {
+        let id = i.url.match(/([\d]+)\/$/)
+        i.id = id[1]
+    
+      })
       this.pokemons = ret['results']
       console.log(this.pokemons)
         }, (err) => {

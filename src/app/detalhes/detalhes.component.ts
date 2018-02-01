@@ -4,7 +4,7 @@ import { DetalhesService } from '../services/detalhes.service'
 @Component({
   selector: 'app-detalhes',
   templateUrl: './detalhes.component.html',
-  styleUrls: ['./detalhes.component.css']
+  styleUrls: ['./detalhes.component.scss']
 })
 export class DetalhesComponent implements OnInit {
 
