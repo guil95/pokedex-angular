@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 import {InterceptorHttp} from './services/InterceptorHttp.service';
@@ -12,15 +13,20 @@ import { DetalhesComponent } from './detalhes/detalhes.component';
 
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 
+import { Search } from './util/search.pipe'
+
 @NgModule({
   declarations: [
     AppComponent,
     ListaComponent,
-    DetalhesComponent
+    DetalhesComponent,
+    Search
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [
     DetalhesService,

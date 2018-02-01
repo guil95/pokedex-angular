@@ -12,6 +12,7 @@ import { Pokemon } from '../models/pokemon.model';
 @Injectable()
 export class ListaComponent implements OnInit {
   public pokemons: Pokemon[]
+  public filtro: string
   constructor(
     private pokedexApiService: PokedexApiService,
     private detalhesService: DetalhesService
@@ -30,6 +31,5 @@ export class ListaComponent implements OnInit {
   public mostrarDetalhe(pokemon, url, id){
     this.detalhesService.populaDetalhe(pokemon, url, id)
   }
-
 
 }
